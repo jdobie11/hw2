@@ -1,2 +1,3 @@
 class Studio < ApplicationRecord
-end
+    has_many :movies
+  end
