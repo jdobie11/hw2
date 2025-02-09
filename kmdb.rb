@@ -85,9 +85,14 @@ Role.destroy_all
 # Generate models and tables, according to the domain model.
 # TODO!
 
+
+
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+warner_bros = Studio.create(name: "Warner Bros.")
+
 
 # Prints a header for the movies output
 puts "Movies"
