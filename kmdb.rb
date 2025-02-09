@@ -91,7 +91,14 @@ Role.destroy_all
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
-warner_bros = Studio.create(name: "Warner Bros.")
+puts "Creating the studio..."
+warner_bros = Studio.create!(name: "Warner Bros.") # Use create! to raise an exception on failure
+puts "Studio created: #{warner_bros.name} with ID: #{warner_bros.id}"
+
+puts "Creating the movies..."
+
+batman_begins = Movie.create!(title: "Batman Begins", year_released: 2005, rated: "PG-13", studio: warner_bros)
+puts "Movie created: #{batman_begins.title} with ID: #{batman_begins.id}, Studio ID: #{batman_begins.studio_id}"
 
 
 # Prints a header for the movies output
